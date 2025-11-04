@@ -1,0 +1,213 @@
+<<!doctype html>
+<html lang="es">
+<head>
+<img src="Imagenes/LOGO.png"
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nordic Studio — Diseño & Integración Digital</title>
+  <meta name="description" content="Nordic Studio - Diseño web, integración de contenidos y soluciones digitales en Bogotá." />
+  <style>
+    /* ===== Variables ===== */
+    :root{
+     
+      --bg:#0f1115;
+      --card:#0d1116;
+      --muted:#9aa3b2;
+      --accent:#0b76d1;
+      --accent-2:#3aa0e6;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family: Inter, system-ui, sans-serif;
+      background: linear-gradient(180deg,#000000 0%, #06080c 60%);
+      color:#e6eef8;
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none;transition:.2s}
+    img{max-width:100%;display:block}
+
+    /* ===== Layout ===== */
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px;}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand h1{font-size:18px;margin:0;color:#fff}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+
+    .logo img{height:50px;width:auto;border-radius:8px}
+
+    /* ===== Nav ===== */
+    nav{display:flex;align-items:center;gap:18px}
+    .nav-links{display:flex;gap:14px}
+    .nav-links a{padding:8px 12px;border-radius:8px;color:var(--muted);font-size:14px}
+    .nav-links a:hover{background:var(--glass);color:var(--accent-2)}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 14px;border-radius:10px;font-weight:700;color:#081025}
+    .menu-toggle{display:none;background:transparent;border:0;color:var(--muted);font-size:20px;cursor:pointer}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center;padding:28px 0}
+    .hero-card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:34px;
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+    }
+    .kicker{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--accent-2);font-weight:700;font-size:13px;margin-bottom:12px}
+    .hero h2{margin:0 0 12px;font-size:28px;line-height:1.2}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .features{display:flex;gap:12px;flex-wrap:wrap}
+    .feature{background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:10px;font-size:13px;color:var(--muted)}
+
+    .contact-quick{background:linear-gradient(180deg,#071422,#091726);border-radius:12px;padding:22px;color:var(--muted)}
+    .contact-quick h3{margin:0 0 8px;color:#fff}
+    .contact-quick a{display:inline-block;margin-top:10px;padding:10px 12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#041028;font-weight:700}
+
+    /* Services */
+    .section{padding:40px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+    .card h4{margin:6px 0 10px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Portfolio */
+    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+    .sample{height:140px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#041028;font-weight:700}
+
+    /* Pricing */
+    .pricing{display:flex;flex-wrap:wrap;gap:12px}
+    .price-card{flex:1;min-width:240px;padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));text-align:center}
+    .price{font-size:20px;color:var(--accent-2);font-weight:700;margin:8px 0}
+
+    /* Contact */
+    form{display:grid;gap:10px}
+    input, textarea{
+      padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);
+      background:transparent;color:inherit;font-size:14px
+    }
+    textarea{min-height:100px;resize:vertical}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:700;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#041028;cursor:pointer}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(255,255,255,0.03);padding:28px 0;margin-top:28px;color:var(--muted);text-align:center;font-size:13px}
+
+    /* Responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr}
+      .nav-links{display:none;flex-direction:column;gap:10px;margin-top:10px}
+      .menu-toggle{display:block}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <div class="brand">
+                <div>
+          <h1>Nordic Studio</h1>
+          <p>Diseño & Integración Digital</p>
+        </div>
+      </div>
+
+      <nav>
+        <div class="nav-links">
+          <a href="#servicios">Servicios</a>
+          <a href="#portafolio">Portafolio</a>
+          <a href="#precios">Precios</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <a class="cta" href="#contacto">Solicita cotización</a>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-card">
+        <span class="kicker">Nordic Studio</span>
+        <h2>Creamos páginas web elegantes y funcionales para negocios que quieren destacar.</h2>
+        <p>Diseños responsivos, integración de pagos y contenidos que convierten visitantes en clientes. Soluciones accesibles para pymes en Bogotá.</p>
+        <div class="features">
+          <div class="feature">Responsive</div>
+          <div class="feature">SEO básico</div>
+          <div class="feature">E-commerce</div>
+          <div class="feature">Soporte postventa</div>
+        </div>
+        <div style="margin-top:18px;display:flex;gap:12px">
+          <a class="btn" href="#contacto">Cotiza tu sitio</a>
+          <a href="#portafolio" style="padding:10px 14px;border:1px solid rgba(255,255,255,0.08);border-radius:10px;color:var(--muted)">Ver trabajos</a>
+        </div>
+      </div>
+      <aside class="contact-quick">
+        <h3>Contacto rápido</h3>
+        <p>Estamos en Usaquén, Bogotá. Atención por WhatsApp y correo.</p>
+        <a href="#contacto">Escríbenos</a>
+      </aside>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="servicios" class="section">
+      <h2>Servicios</h2>
+      <div class="grid">
+        <div class="card"><h4>Diseño web a medida</h4><p>Diseños modernos, responsivos y atractivos.</p></div>
+        <div class="card"><h4>E-commerce</h4><p>Tiendas optimizadas con pasarela de pago.</p></div>
+        <div class="card"><h4>Contenidos & SEO</h4><p>Textos y optimización para Google.</p></div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portafolio" class="section">
+      <h2>Portafolio</h2>
+      <div class="portfolio-grid">
+        <div class="sample">Tienda - Café</div>
+        <div class="sample">Restaurante</div>
+        <div class="sample">Portfolio Profesional</div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="precios" class="section">
+      <h2>Precios</h2>
+      <div class="pricing">
+        <div class="price-card"><h3>Básico</h3><div class="price">$500.000</div><p>One page y formulario.</p><a class="btn" href="#contacto">Solicitar</a></div>
+        <div class="price-card"><h3>Pro</h3><div class="price">$900.000</div><p>Multi-página optimizada.</p><a class="btn" href="#contacto">Solicitar</a></div>
+        <div class="price-card"><h3>E-commerce</h3><div class="price">$1.500.000</div><p>Tienda en línea completa.</p><a class="btn" href="#contacto">Solicitar</a></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto" class="section">
+      <h2>Contacto</h2>
+      <form onsubmit="submitForm(event)">
+        <input id="name" type="text" placeholder="Tu nombre" required>
+        <input id="email" type="email" placeholder="Correo" required>
+        <textarea id="message" placeholder="Cuéntanos tu proyecto" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+        <div id="formResult" style="margin-top:10px;font-size:14px"></div>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      © <span id="year"></span> Nordic Studio S.A.S. — Todos los derechos reservados
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu(){
+      const nav=document.querySelector('.nav-links');
+      nav.style.display=nav.style.display==='flex'?'none':'flex';
+    }
+    document.getElementById('year').textContent=new Date().getFullYear();
+    function submitForm(e){
+      e.preventDefault();
+      document.getElementById('formResult').textContent='Mensaje enviado correctamente.';
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
